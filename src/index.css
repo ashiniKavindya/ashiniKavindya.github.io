@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-void: #05030d;
+  --color-abyss: #0a0718;
+  --color-surface: #100c22;
+  --color-surface-2: #16112c;
+  --color-line: #2a2350;
+
+  --color-violet: #8b5cf6;
+  --color-violet-soft: #a78bfa;
+  --color-cyan: #22d3ee;
+  --color-magenta: #ec4899;
+  --color-mist: #c7d2fe;
+  --color-dim: #8a84a8;
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 11s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+  --animate-pulse-glow: pulse-glow 3.5s ease-in-out infinite;
+  --animate-marquee: marquee 28s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(-18px) translateX(8px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; filter: blur(60px); }
+    50% { opacity: 0.85; filter: blur(80px); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-void);
+  color: #e7e5f5;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-violet);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-violet), var(--color-cyan));
+  border-radius: 999px;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #c4b5fd 0%, #a78bfa 30%, #67e8f9 70%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(167, 139, 250, 0.16);
+  backdrop-filter: blur(14px);
+}
+
+.glass-card:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.noise-veil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, transparent 40%, var(--color-void) 100%);
+}
