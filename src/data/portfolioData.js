@@ -12,7 +12,7 @@ export const profile = {
   linkedinLabel: "Ashini Kavindya",
   githubLabel: "AshiniKavindya",
   resumeFile: "/Ashini Kavindya.pdf",
-  bio: "Computer Science & Engineering undergraduate at the University of Moratuwa (DSE specialization), focused on machine learning, deep learning, and natural language processing. I build systems that turn raw signals — text, gestures, speech — into structured intelligence, from low-resource language tooling to real-time gesture recognition on edge devices.",
+  bio: "Computer Science undergraduate at the University of Moratuwa, specializing in machine learning, deep learning, and NLP. I build intelligent systems — from language tools to real-time gesture recognition.",
 };
 
 export const stats = [
@@ -70,7 +70,7 @@ export const projects = [
     title: "grapheme++",
     period: "Jan 2026 – Present",
     description:
-      "A library for more accurate text processing of Sinhala and Tamil scripts, built around correct grapheme cluster segmentation for low-resource South Asian languages.",
+      "A text-processing library for accurate grapheme segmentation in Sinhala and Tamil.",
     tech: ["Python", "Unicode Text Processing", "Grapheme Segmentation", "NLP Metrics"],
     tag: "NLP",
     link: null,
@@ -79,21 +79,16 @@ export const projects = [
     title: "Sinhala Air Writing Recognition (1D-CNN)",
     period: "Mar 2026 – Present",
     description:
-      "A real-time gesture recognition system translating spatial index-finger trajectories into Sinhala Unicode characters, running inference on edge devices.",
+      "A real-time system that turns finger-tracing gestures into Sinhala characters, running on edge devices.",
     tech: ["Python", "PyTorch", "MediaPipe", "NumPy", "SciPy", "OpenCV"],
     tag: "Deep Learning",
     link: null,
-    highlights: [
-      "Curated a custom time-series gesture dataset using a self-built video collection and tracking utility",
-      "Built a spatial preprocessing pipeline to capture, zero-center, and interpolate trajectories into uniform 100-point signals",
-      "Designed a lightweight 1D-CNN in PyTorch for low-latency, real-time character inference",
-    ],
   },
   {
     title: "Medsync — Clinic Appointment & Treatment Management",
     period: "Nov 2025",
     description:
-      "A full-stack web application that streamlines clinic operations, patient appointments, and treatment records with secure auth workflows for sensitive medical data.",
+      "A full-stack app for managing clinic appointments and treatment records, with secure auth for medical data.",
     tech: ["React", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "TailwindCSS"],
     tag: "Full-Stack",
     link: null,
@@ -102,28 +97,19 @@ export const projects = [
     title: "RPAL Interpreter",
     period: "Mar 2026 – Apr 2026",
     description:
-      "A from-scratch interpreter for the RPAL programming language built as University of Moratuwa coursework, matched against the official rpal.exe reference output.",
+      "A from-scratch RPAL language interpreter, verified against the official rpal.exe reference output.",
     tech: ["C++", "Recursive Descent Parsing", "Tree-Based Evaluation"],
     tag: "Systems",
     link: "https://github.com/ashiniKavindya/RPAL-Interpreter",
-    highlights: [
-      "Built a custom lexical analyzer, recursive descent parser, and AST generator",
-      "Applied standardization rules and evaluated via a Control Stack Environment (CSE) machine",
-      "Added CLI debugging flags and validated against the reference interpreter",
-    ],
   },
   {
     title: "Sentiment Analysis System",
     period: "Dec 2025",
     description:
-      "A sentiment analysis model classifying text as positive or negative, paired with an interactive web interface for real-time predictions.",
+      "A sentiment analysis model classifying text as positive or negative, with an interactive web interface for real-time predictions.",
     tech: ["Python", "Scikit-learn", "NLP", "Pandas", "NumPy", "HTML", "JavaScript"],
     tag: "Machine Learning",
     link: null,
-    highlights: [
-      "Built an interactive web interface for user input and real-time sentiment display",
-      "Trained and tuned models on a Kaggle dataset, evaluated via accuracy, precision, recall, and F1-score",
-    ],
   },
   {
     title: "Nano-Processor Simulation",
@@ -142,11 +128,7 @@ export const publications = [
     venue: "Accepted at MERCon 2026 (Collaborative Research)",
     year: "2026",
     description:
-      "An end-to-end multilingual topic modeling pipeline for Sri Lankan Hansard debates, integrating LLM-based extraction, multilingual embeddings, dimensionality reduction, clustering, and topic representation.",
-    highlights: [
-      "Evaluated multilingual embedding models for long-form code-mixed parliamentary speech using cross-lingual semantic similarity, semantic retrieval, and anisotropy analysis",
-      "Conducted a comparative study of clustering algorithms, showing HDBSCAN's effectiveness for high-purity topic extraction while analyzing precision-coverage trade-offs",
-    ],
+      "An end-to-end topic modeling pipeline for Sri Lankan parliamentary debates, combining multilingual embeddings with clustering to surface themes across languages.",
   },
 ];
 

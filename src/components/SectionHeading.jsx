@@ -5,11 +5,11 @@ export default function SectionHeading({ index, title, subtitle, align = "left" 
     <Reveal
       className={`mb-14 flex flex-col ${align === "center" ? "items-center text-center" : "items-start text-left"}`}
     >
-      <span className="mb-3 flex items-center gap-2 font-mono text-xs tracking-[0.3em] text-cyan-300/70 uppercase">
-        <span className="h-px w-6 bg-gradient-to-r from-violet-400 to-cyan-300" />
+      <span className="mb-3 flex items-center gap-2 text-xs tracking-[0.25em] text-[var(--color-dim)] uppercase">
+        <span className="h-px w-6 bg-[var(--color-violet)]" />
         {index}
       </span>
-      <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+      <h2 className="font-display text-3xl font-medium tracking-tight text-[#2a2620] sm:text-4xl">
         {title}
       </h2>
       {subtitle && (

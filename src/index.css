@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-hand: "Caveat", cursive;
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-mono: "Inter", system-ui, sans-serif;
 
-  --color-void: #05030d;
-  --color-abyss: #0a0718;
-  --color-surface: #100c22;
-  --color-surface-2: #16112c;
-  --color-line: #2a2350;
+  --color-void: #f2ecd8;
+  --color-abyss: #ece5cd;
+  --color-surface: #fbf8ee;
+  --color-surface-2: #ffffff;
+  --color-line: #dcd3b3;
 
-  --color-violet: #8b5cf6;
-  --color-violet-soft: #a78bfa;
-  --color-cyan: #22d3ee;
-  --color-magenta: #ec4899;
-  --color-mist: #c7d2fe;
-  --color-dim: #8a84a8;
+  --color-violet: #cc6a1e;
+  --color-violet-soft: #d97e3c;
+  --color-cyan: #b3591a;
+  --color-magenta: #cc6a1e;
+  --color-mist: #2a2620;
+  --color-dim: #6e6b5c;
 
   --animate-float: float 7s ease-in-out infinite;
   --animate-float-slow: float 11s ease-in-out infinite;
@@ -45,7 +46,7 @@ html {
 body {
   margin: 0;
   background: var(--color-void);
-  color: #e7e5f5;
+  color: #2a2620;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,38 +65,28 @@ body {
   background: var(--color-void);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--color-violet), var(--color-cyan));
+  background: var(--color-violet);
   border-radius: 999px;
 }
 
 .text-gradient {
-  background: linear-gradient(120deg, #c4b5fd 0%, #a78bfa 30%, #67e8f9 70%, #22d3ee 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-violet);
 }
 
 .glass-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
-  border: 1px solid rgba(167, 139, 250, 0.16);
-  backdrop-filter: blur(14px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 2px 16px -8px rgba(42, 38, 32, 0.12);
 }
 
 .glass-card:hover {
-  border-color: rgba(167, 139, 250, 0.4);
+  border-color: rgba(204, 106, 30, 0.45);
 }
 
 .grid-overlay {
-  background-image:
-    linear-gradient(rgba(139, 92, 246, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.06) 1px, transparent 1px);
-  background-size: 42px 42px;
+  display: none;
 }
 
 .noise-veil::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, transparent 40%, var(--color-void) 100%);
+  display: none;
 }

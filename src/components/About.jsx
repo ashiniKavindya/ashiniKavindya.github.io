@@ -13,14 +13,14 @@ export default function About() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <Reveal delay={0.1} className="relative">
             <div className="glass-card relative overflow-hidden rounded-3xl p-8 sm:p-10">
-              <FiCpu className="absolute -top-6 -right-6 h-32 w-32 text-violet-500/10" />
-              <p className="relative text-lg leading-relaxed text-slate-200/90">{profile.bio}</p>
+              <FiCpu className="absolute -top-6 -right-6 h-32 w-32 text-[var(--color-violet)]/10" />
+              <p className="relative text-lg leading-relaxed text-stone-700">{profile.bio}</p>
               <div className="relative mt-8 flex flex-wrap gap-3">
                 {["Deep Learning", "NLP", "Computer Vision", "Full-Stack", "Edge Inference"].map(
                   (tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-1 font-mono text-xs text-cyan-200"
+                      className="rounded-full border border-[var(--color-line)] bg-[var(--color-void)] px-3 py-1 text-xs text-stone-600"
                     >
                       {tag}
                     </span>
@@ -37,12 +37,12 @@ export default function About() {
                   whileHover={{ y: -4 }}
                   className="glass-card flex h-full flex-col justify-between rounded-2xl p-5"
                 >
-                  <FiTarget className="mb-3 text-violet-300/70" size={18} />
-                  <div className="font-display text-2xl font-semibold text-white sm:text-3xl">
+                  <FiTarget className="mb-3 text-[var(--color-violet)]/70" size={18} />
+                  <div className="font-display text-2xl font-medium text-[#2a2620] sm:text-3xl">
                     {s.value}
-                    <span className="text-base text-violet-300/70">{s.suffix}</span>
+                    <span className="text-base text-[var(--color-violet)]/70">{s.suffix}</span>
                   </div>
-                  <div className="mt-1 font-mono text-xs tracking-wide text-[var(--color-dim)] uppercase">
+                  <div className="mt-1 text-xs tracking-wide text-[var(--color-dim)] uppercase">
                     {s.label}
                   </div>
                 </motion.div>

@@ -54,13 +54,11 @@ const categoryIcon = {
 export default function Skills() {
   return (
     <section id="skills" className="relative scroll-mt-24 px-6 py-28">
-      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-700/10 blur-[120px]" />
-
       <div className="relative mx-auto max-w-6xl">
         <SectionHeading
           index="02 · Skills"
           title="A cross-stack toolkit"
-          subtitle="From model architecture to production UI — the tools I reach for most."
+          subtitle="Tools I use across ML and web development."
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -70,10 +68,10 @@ export default function Skills() {
               <Reveal key={category} delay={i * 0.08}>
                 <div className="glass-card h-full rounded-2xl p-6">
                   <div className="mb-5 flex items-center gap-3">
-                    <span className="grid h-9 w-9 place-items-center rounded-lg border border-violet-400/30 bg-violet-500/10 text-violet-200">
+                    <span className="grid h-9 w-9 place-items-center rounded-lg border border-[var(--color-violet)]/30 bg-[var(--color-violet)]/10 text-[var(--color-violet)]">
                       <CategoryIcon size={16} />
                     </span>
-                    <h3 className="font-display text-base font-semibold text-white">{category}</h3>
+                    <h3 className="font-display text-base font-medium text-[#2a2620]">{category}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2.5">
                     {list.map((skill) => {
@@ -81,10 +79,10 @@ export default function Skills() {
                       return (
                         <motion.span
                           key={skill}
-                          whileHover={{ y: -3, borderColor: "rgba(34,211,238,0.5)" }}
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 font-mono text-xs text-slate-200"
+                          whileHover={{ y: -3, borderColor: "rgba(204,106,30,0.5)" }}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-line)] bg-[var(--color-void)] px-3 py-1.5 text-xs text-stone-700"
                         >
-                          {Icon ? <Icon size={13} className="text-cyan-300" /> : null}
+                          {Icon ? <Icon size={13} className="text-[var(--color-violet)]" /> : null}
                           {skill}
                         </motion.span>
                       );
