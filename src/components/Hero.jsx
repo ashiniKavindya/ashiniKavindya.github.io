@@ -25,7 +25,7 @@ export default function Hero() {
             Hi, I'm <span className="text-[var(--color-violet)]">{profile.shortName}</span>
           </p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-dim)]">
-            {profile.location} — open to opportunities.
+            {profile.subtitle}
           </p>
 
           <motion.div variants={item} className="mt-10 flex items-center gap-4">
@@ -66,8 +66,8 @@ export default function Hero() {
             variants={item}
             className="mt-2 font-display text-4xl leading-[1.15] font-medium text-[#2a2620] sm:text-5xl lg:text-6xl"
           >
-            Building intelligent systems at the intersection of{" "}
-            <em className="font-normal italic">deep learning, NLP,</em> and full-stack engineering.
+            I build rough drafts of intelligence, then{" "}
+            <em className="font-normal italic">teach them to think on their own</em>.
           </motion.h1>
 
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-5">

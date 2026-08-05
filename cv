@@ -1,0 +1,360 @@
+%-------------------------
+% Ashini Kavindya Nawagamuwa — CV
+% Style based on Harshibar's resume template (MIT)
+% Compile with pdfLaTeX
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% only for pdflatex -- makes the PDF machine readable / ATS parsable
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% greys
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline for links
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+% NOTE: the contour version duplicates link text ~16x in the PDF text layer,
+% so links copy/parse as "GitHubGitHubGitHub...". Plain \uline extracts cleanly.
+\newcommand{\myuline}[1]{\uline{#1}}
+
+% helvetica-style base font
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% sans serif section headers with the thick grey rule
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+% {title}{dates}{subtitle}{location}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey} \small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+% {name}{one-line description}{dates}
+\newcommand{\resumeProject}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #3}\vspace{1pt}\\
+      \multicolumn{2}{p{0.98\textwidth}}{\textit{\small #2}}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+% {url}{title} -- project title that links to its repo, no visible URL
+\newcommand{\repolink}[2]{\href{#1}{#2\hspace{4pt}\raisebox{-0.5pt}{\small\faGithub}}}
+
+% {text}{date} -- single line entries (certifications, memberships)
+\newcommand{\resumeCert}[2]{
+  \item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small #1 & {\color{dark-grey}\small #2}
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+% tight list for single-line rows -- change itemsep to taste
+\newcommand{\resumeCertListStart}{\begin{itemize}[leftmargin=0in, label={},
+    itemsep=1pt, parsep=0pt, topsep=2pt, partopsep=0pt]}
+\newcommand{\resumeCertListEnd}{\end{itemize}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Ashini Kavindya Nawagamuwa} \\ \vspace{6pt}
+    \small \faPhone* \hspace{2pt} \texttt{+94 75 574 4879} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:ashinik.23@cse.mrt.ac.lk}{\texttt{ashinik.23@cse.mrt.ac.lk}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt} \texttt{Ruwanwella, Sri Lanka}
+    \\ \vspace{3pt}
+    \small \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/ashini-kavindya-0a4a48345}{\texttt{ashini-kavindya}} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/ashiniKavindya}{\texttt{ashiniKavindya}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{SUMMARY}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+      An enthusiastic Computer Science and Engineering undergraduate passionate about Artificial Intelligence, Data Science and
+      Machine Learning, with a growing interest in Deep Learning and NLP. Driven by
+      curiosity and a strong problem solving mindset, I strive to build intelligent systems that create real world impact
+      through responsible innovation.
+    }}
+ \end{itemize}
+\vspace{-4pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of Moratuwa}{Mar. 2024 -- Present}
+      {B.Sc. Eng. (Hons.) in Computer Science \& Engineering, Data Science Specialization}{Moratuwa, Sri Lanka}
+      \resumeItemListStart
+        %%\resumeItem{\textbf{GPA}: 3.47 / 4.00}
+        \resumeItem{\textbf{Data Science \& AI}: Deep Neural Networks, Machine Learning, Data Mining, Data Science, Artificial Intelligence}
+        \resumeItem{\textbf{Core CS \& Mathematics}: Data Structures and Algorithms, Database Systems, Linear Algebra, Applied Statistics, Numerical Methods, Computer Architecture, Software Engineering}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {St. Joseph's Girls' College}{Jan. 2023}
+      {GCE Advanced Level, Physical Science Stream}{Kegalle, Sri Lanka}
+      \resumeItemListStart
+        \resumeItem{\textbf{Z-Score +2.56}; island rank \textbf{179 out of 35,197}}
+        % \resumeItem{Combined Mathematics (A), Chemistry (A), Physics (A)}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+
+    \resumeProject
+      {\repolink{https://github.com/vmenan/grapheme-kit}{grapheme-kit}}
+      {Open source Python library for grapheme aware text processing in Sinhala and Tamil}
+      {Jan. 2026 -- Jun. 2026}
+      \resumeItemListStart
+        \resumeItem{Implemented grapheme segmentation, normalization, evaluation that treat multi-codepoint clusters as single visual characters}
+        \resumeItem{\textbf{Technologies}: Python, Unicode text processing, NLP evaluation metrics}
+      \resumeItemListEnd
+
+    \resumeProject
+  {\repolink{https://github.com/ashiniKavindya/FleetSentin}{Agentic Fuel Theft Detection}}
+  {Multi agent system that triages fleet fuel telemetry and auto files Jira tickets for suspected theft}
+  {Jun. 2026}
+  \resumeItemListStart
+    \resumeItem{Built a LangGraph pipeline gating LLM investigation behind a deterministic triage layer, with read only tools for the agent and Jira write access isolated to a single de-duplicating node}
+    \resumeItem{\textbf{Technologies}: Python, LangGraph, MCP, MongoDB, ThingsBoard, MQTT, Jira REST API}
+  \resumeItemListEnd
+    
+    \resumeProject
+  {Bias-Aware Sinhala News Aggregation Platform}
+  {Research project on event level clustering and bias measurement in Sinhala media.}
+  {2026 Jul. - Present}
+  \resumeItemListStart
+    \resumeItem{Building a platform that clusters Sinhala news articles by real world event across 10+ publishers and surfaces how outlets differ in coverage and framing}
+    %%\resumeItem{Constructing the first annotated Sinhala media-bias corpus (roughly 5,000 articles) and implementing event clustering with \textbf{LASER3} embeddings and HDBSCAN}
+    \resumeItem{\textbf{Technologies}: Python, Hugging Face, LASER3, HDBSCAN, Scikit-learn, FastAPI, PostgreSQL, React}
+ 
+  \resumeItemListEnd
+    
+    \resumeProject
+      {\repolink{https://github.com/ashiniKavindya/Lyra}{Lyra}}
+      {Conversational assistant that reads the user's facial expressions in real time and adapts its responses}
+      {Jun. 2026 - Jul. 2026}
+      \resumeItemListStart
+        \resumeItem{Built a real time facial emotion detection pipeline (MediaPipe with a custom FACS grounded classifier) feeding mood context into a \textbf{Gemini} powered chat assistant with tool calling, RAG, and conversation memory}
+        \resumeItem{a TypeScript UI with a mood reactive avatar, and an Express backend with Google OAuth and per user data isolation}
+        \resumeItem{\textbf{Technologies}: Python, MediaPipe, LangChain, Google Gemini API, TypeScript, React, Express.js, SQLite}
+      \resumeItemListEnd
+      
+    
+    \resumeProject
+      {Sinhala Air Writing Recognition (1D-CNN)}
+      {Real time gesture recognition system translating index finger trajectories into Sinhala Unicode}
+      {Mar. 2026 - Present}
+      \resumeItemListStart
+        \resumeItem{Curated a custom time series gesture dataset for Sinhala characters and modifiers using a self developed video collection and tracking utility}
+        \resumeItem{Built a spatial preprocessing pipeline with MediaPipe and SciPy to capture, zero center, and interpolate finger trajectories into uniform 100 point signals}
+        \resumeItem{Designed a lightweight 1D-CNN in PyTorch for low latency temporal feature extraction}
+        \resumeItem{\textbf{Technologies}: Python, PyTorch, MediaPipe, NumPy, SciPy, OpenCV}
+      \resumeItemListEnd
+
+    \resumeProject
+      {\repolink{https://github.com/ashiniKavindya/RPAL-Interpreter}{RPAL Interpreter}}
+      {An interpreter for the RPAL programming language, built from scratch as coursework}
+      {Mar. 2026 - Apr. 2026}
+      \resumeItemListStart
+        \resumeItem{Built a custom lexical analyzer, recursive descent parser, and AST generator}
+        \resumeItem{Applied transformation rules to standardize the AST and evaluated it via a Control Stack Environment (CSE) machine}
+        \resumeItem{Matched outputs against the official \texttt{rpal.exe} reference and added CLI flags for debugging}
+        \resumeItem{\textbf{Technologies}: C++, recursive descent parsing, tree-based evaluation}
+      \resumeItemListEnd
+
+    \resumeProject
+      {\repolink{https://github.com/KRakeesh04/Project-MedSync}{MedSync - Clinic Appointment and Treatment Management System}}
+      {Full-stack clinic management platform built as a 5-member team project}
+      {Nov. 2025}
+      \resumeItemListStart
+        \resumeItem{Implemented role based access control across \textbf{10 user roles}, enforcing per-module permissions over medical records, treatment history, billing, insurance claims, and staff scheduling}
+        \resumeItem{Designed a normalized PostgreSQL schema from an ERD covering patients, appointments, treatments, providers, and payments, specified in a full SRS}
+        \resumeItem{\textbf{Technologies}: React (TypeScript), Vite, TailwindCSS, Node.js, Express.js, PostgreSQL}
+      \resumeItemListEnd
+
+    \resumeProject
+      {Sentiment Analysis System}
+      {Machine learning model classifying text as positive or negative, with a live web front end}
+      {Dec. 2025}
+      \resumeItemListStart
+        \resumeItem{Trained, tuned, and evaluated models on a Kaggle dataset using accuracy, precision, recall, and F1-score}
+        \resumeItem{Built an interactive web interface in HTML and JavaScript for user input and real time sentiment display}
+        \resumeItem{\textbf{Technologies}: Python, Scikit-learn, NLP, Pandas, NumPy, HTML, JavaScript}
+      \resumeItemListEnd
+
+    \resumeProject
+      {Nano Processor Simulation}
+      {4-bit nanoprocessor with a custom instruction set, ALU, and control unit, verified on FPGA}
+      {Apr. 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Technologies}: VHDL, Xilinx Vivado, Assembly}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+  \resumeSubHeadingListStart
+
+    \resumeProject
+      {Trilingual Topic Modeling of Sri Lankan Parliamentary Debates}
+      {Accepted at MERCon 2026 (collaborative research)}
+      {2026}
+      \resumeItemListStart
+        \resumeItem{Proposed an end-to-end multilingual topic modeling pipeline for Sri Lankan Hansard debates, integrating LLM based extraction, multilingual embeddings, dimensionality reduction, clustering, and topic representation}
+        \resumeItem{Evaluated multilingual embedding models for long form, code mixed parliamentary speeches using cross lingual semantic similarity, semantic retrieval, and anisotropy analysis}
+        \resumeItem{Compared clustering algorithms, showing HDBSCAN to be most effective for high-purity topic extraction while analyzing precision coverage trade offs}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  \resumeProject
+      {\href{https://arxiv.org/abs/2607.22456}{\myuline{grapheme-kit: Grapheme Level Metrics and Text Processing for Multilingual NLP}}}
+      {Nisfer, \textbf{Kavindya}, Atukorala, P. Velayuthan, M. Velayuthan - arXiv preprint, cs.CL}
+      {Jul. 2026}
+      \resumeItemListStart
+        \resumeItem{Extended lexical distance, similarity, and evaluation metrics to operate on grapheme clusters rather than Unicode code points, with grapheme identification and composition/decomposition utilities for Sinhala and Tamil}
+        \resumeItem{Demonstrated through an OCR case study that grapheme level metrics evaluate complex scripts more faithfully than code point metrics}
+      \resumeItemListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{CERTIFICATIONS}
+  \resumeCertListStart
+    \resumeCert{\href{https://www.coursera.org/account/accomplishments/records/37P1B35LK3ZA}{\myuline{Advanced Learning Algorithms}} - Coursera}{Jan. 2026}
+    \resumeCert{\href{https://www.coursera.org/account/accomplishments/records/OJPRMHP1MH2D}{\myuline{Python for Data Science, AI and Development}} - Coursera}{Jan. 2026}
+    \resumeCert{\href{https://www.coursera.org/account/accomplishments/records/QADY2EJNJ034}{\myuline{Developing AI Applications with Python and Flask}} - Coursera}{Dec. 2025}
+    \resumeCert{\href{https://www.coursera.org/account/accomplishments/records/ARST5UTL7L2P}{\myuline{Supervised Machine Learning: Regression and Classification}} - Coursera}{Dec. 2025}
+    \resumeCert{Data Cleaning - Kaggle}{Feb. 2026}
+    \resumeCert{Pandas - Kaggle}{Jan. 2026}
+    \resumeCert{Intermediate Machine Learning - Kaggle}{Dec. 2025}
+    \resumeCert{Intro to Machine Learning - Kaggle}{Dec. 2025}
+  \resumeCertListEnd
+
+%-----------SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: Python, C++, Java, JavaScript,TypeScript, VHDL, HTML/CSS}\vspace{2pt} \\
+     \textbf{ML \& Data} {: PyTorch, Scikit-learn, OpenCV, MediaPipe, NumPy, SciPy, Pandas}\vspace{2pt} \\
+     \textbf{Web} {: React, Node.js, Express.js, PostgreSQL, TailwindCSS}\vspace{2pt} \\
+     \textbf{Tools} {: Git, GitHub, Jupyter, Xilinx Vivado}
+    }}
+ \end{itemize}
+
+%-----------REFERENCES-----------
+\section{REFERENCES}
+{\small
+\begin{tabular*}{\textwidth}[t]{p{0.47\textwidth}@{\extracolsep{\fill}}p{0.47\textwidth}}
+  \textbf{Prof. D. A. Meedeniya} & \textbf{Menan Velayuthan} \\
+  Professor & PhD Candidate \\
+  Dept.\ of Computer Science \& Engineering & Utrecht University \\
+  University of Moratuwa, Sri Lanka & Netherlands \\
+  \href{mailto:dulanim@uom.lk}{\myuline{dulanim@uom.lk}} &
+  \href{mailto:m.velayuthan@uu.nl}{\myuline{m.velayuthan@uu.nl}} \\
+\end{tabular*}
+}
+
+%-----------OPTIONAL SECTIONS (uncomment to use)-----------
+\begin{comment}
+
+\section{VOLUNTEER EXPERIENCE}
+  \resumeCertListStart
+    \resumeCert{\textbf{Mentor} --- Code Jam Future Minds Competition, Dept.\ of CSE, University of Moratuwa}{Apr. 2025}
+    \resumeCert{\textbf{Organizing Committee} --- IESL Robo Games, Dept.\ of CSE, University of Moratuwa}{Mar. 2025}
+    \resumeCert{\textbf{Partnership Development Committee} --- Hit the Ground Cricket Tournament, Dept.\ of CSE}{Jan. 2026}
+    \resumeCert{\textbf{Program Committee} --- SLIoT Competition, Dept.\ of CSE, University of Moratuwa}{Ongoing}
+  \resumeCertListEnd
+
+\section{PROFESSIONAL MEMBERSHIPS}
+  \resumeCertListStart
+    \resumeCert{IESL Student Branch}{Mar. 2025 -- Present}
+    \resumeCert{IEEE Student Branch (Membership ID: 101587994)}{Aug. 2025 -- Present}
+  \resumeCertListEnd
+
+\end{comment}
+
+%-------------------------------------------
+\end{document}

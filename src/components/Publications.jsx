@@ -19,7 +19,18 @@ export default function Publications() {
                   </span>
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="font-display text-xl font-medium text-[#2a2620]">{pub.title}</h3>
+                      {pub.link ? (
+                        <a
+                          href={pub.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-display text-xl font-medium text-[#2a2620] underline decoration-[var(--color-line)] underline-offset-4 transition-colors hover:text-[var(--color-violet)] hover:decoration-[var(--color-violet)]"
+                        >
+                          {pub.title}
+                        </a>
+                      ) : (
+                        <h3 className="font-display text-xl font-medium text-[#2a2620]">{pub.title}</h3>
+                      )}
                       <span className="rounded-full border border-[var(--color-line)] bg-[var(--color-void)] px-3 py-0.5 text-[11px] text-stone-600">
                         {pub.year}
                       </span>
